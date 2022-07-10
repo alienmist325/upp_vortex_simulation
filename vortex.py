@@ -22,11 +22,12 @@ class Vortex:
 
     # The functions to be filled in
 
-    def getField(self, other_pos):
-        """Get the velocity inducted at other_pos by the vortex, as a tuple."""
+    def getVelocity(self, other_pos):
+        """Get the velocity induced at other_pos by the vortex, as a tuple."""
         return
 
     def moveVortex(self, vortexArray, timeStep):
         """Compute the velocity of the vortex, and move it."""
-        # timeStep is how many time steps we assume the velocity doesn't change
+        # timeStep is how many times we move with the same velocity
+        # each time the method is called.
         return
