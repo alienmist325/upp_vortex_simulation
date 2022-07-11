@@ -10,6 +10,9 @@ class L_System:
         self.speed = speed
         self.turtle.speed(0)
 
+    def __repr__(self):
+        return self.current_string
+
     def add_rule(self, char, string):
         """
         Add a new rule, specifying what a given
@@ -20,9 +23,6 @@ class L_System:
         """
         Apply all the rules to generate a new string.
         """
-
-    def __repr__(self):
-        return self.current_string
 
     def print(self):
         """
@@ -44,3 +44,10 @@ def tree():
     system.add_rule("1", "11")
     system.add_rule("0", "1[-0]+0")
     return system
+
+
+system = tree()
+its = input("How many iterations would you like to perform? ")
+for i in range(its):
+    system.update()
+system.print()
