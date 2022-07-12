@@ -3,7 +3,7 @@ from colors import standard, alternative
 
 
 class Vortex:
-    def __init__(self, pos, circulation, velocity=(0, 0)):
+    def __init__(self, pos=(0, 0), circulation=1, velocity=(0, 0)):
         self.pos = pos
         self.circulation = circulation
         self.velocity = velocity
@@ -18,21 +18,25 @@ class Vortex:
 
     def outOfBounds(self):
         """Return whether the vortex has completely left the screen."""
-        self_x, self_y = self.pos
-        return abs(self_x) > 10000 or abs(self_y) > 10000
+        selfX, selfY = self.pos
+        return abs(selfX) > 10000 or abs(selfY) > 10000
 
     # The functions to be filled in:
 
-    def getInducedVelocity(self, other_pos):
-        """Get the velocity induced at other_pos by the vortex, as a tuple."""
+    def getInducedVelocity(self, otherPos):
+        """
+        Get the velocity contribution that this vortex
+        induces at other_pos, as a tuple.
+        """
 
     def computeVelocity(self, vortexArray):
         """
-        Compute the velocity of the vortex by combining the contributions from
-        all surrounding vortices.
+        Compute and set the velocity of this vortex by combining
+        the contributions from all surrounding vortices.
         """
 
     def move(self, timePeriod):
         """
-        Move the vortex over the specified time period.
+        Move this vortex over the specified time
+        period, updating its position.
         """

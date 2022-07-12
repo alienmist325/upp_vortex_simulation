@@ -75,7 +75,7 @@ play = False
 textMode = False
 n = 1
 
-window = pygame.display.set_mode((1800, 1000))
+window = pygame.display.set_mode((1800, 1000), pygame.RESIZABLE)
 screen = pygame.display.get_surface()
 center = screen.get_rect().center
 
@@ -100,6 +100,7 @@ while open:
         for i in range(n):
             for vortex in vortexArray:
                 vortex.computeVelocity(vortexArray)
+
             for vortex in vortexArray:
                 vortex.move(100 / n)  # maintains framerate
 
