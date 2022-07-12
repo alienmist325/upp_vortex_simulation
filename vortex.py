@@ -26,7 +26,7 @@ class Vortex:
     def getInducedVelocity(self, otherPos):
         """
         Get the velocity contribution that this vortex
-        induces at other_pos, as a tuple.
+        induces at otherPos, as a tuple.
         """
 
     def computeVelocity(self, vortexArray):
